@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 export default function About() {
   return (
-    <section className="bg-[#f9f3e6] min-h-screen flex flex-col lg:flex-row items-center justify-center p-8">
+    <section className="bg-white min-h-screen flex flex-col lg:flex-row items-center justify-center p-8">
     <motion.div 
       className="lg:w-1/2 space-y-6 mb-8 lg:mb-0"
       initial={{ opacity: 0, y: 20 }}

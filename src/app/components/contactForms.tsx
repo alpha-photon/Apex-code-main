@@ -24,7 +24,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-gray-400 bg-opacity-10  p-8 rounded-lg   ">
+    <div className="bg-white bg-opacity-10  p-8 rounded-lg   ">
      {/* max-w-4xl mx-auto shadow-lg for old*/}
       {/* <h2 className="text-2xl font-semibold text-gray-700 mb-2">CONNECT WITH US</h2> */}
       <h1 className="text-5xl font-bold text-gray-900 mb-6">Ready to Innovate?</h1>
