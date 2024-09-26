@@ -1,18 +1,22 @@
-// components/Footer.js
 'use client';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 
-export default function InteractiveFooter() {
-  
+const navItems = [
+  { name: 'Home', path: '/' },
+  { name: 'About', path: '/about' },
+  { name: 'Services', path: '/services' },
+  { name: 'Contact', path: '/contact' },
+  { name: 'Blogs', path: '/blogs' }
+];
 
+export default function InteractiveFooter() {
   return (
-    
     <footer className="bg-gray-400 bg-opacity-10 text-black py-12 px-4 md:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               Get the right<br />partners for you.
@@ -54,12 +58,25 @@ export default function InteractiveFooter() {
               </Link>
             </motion.div>
           </div>
+          <div>
+            <h3 className="text-xl font-semibold mb-4 text-black">Navigation</h3>
+            <nav>
+              <ul className="space-y-2">
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <Link href={item.path} className="text-gray-500 hover:text-black transition-colors">
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
         </div>
 
         <div className="text-sm text-gray-400">
           Apex Code © {new Date().getFullYear()}. All rights reserved.
         </div>
-        
       </div>
     </footer>
   );
