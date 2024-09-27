@@ -1,14 +1,14 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import Link from "next/link"
-import Image from "next/image"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import Link from "next/link";
+import Image from "next/image";
 
 interface BlogPostProps {
-  id: number
-  title: string
-  excerpt: string
-  date: string
-  imageUrl: string
+  id: number;
+  title: string;
+  excerpt: string;
+  date: string;
+  imageUrl: string;
 }
 
 export function BlogPost({ id, title, excerpt, date, imageUrl }: BlogPostProps) {
@@ -29,10 +29,12 @@ export function BlogPost({ id, title, excerpt, date, imageUrl }: BlogPostProps) 
         <p className="text-sm text-muted-foreground">Published on: {date}</p>
       </CardContent>
       <CardFooter className="p-4">
-        <Button asChild className="w-full">
-          <Link href={`/blog/${id}`}>Read More</Link>
-        </Button>
+        <Link href={`/blog/${id}`} >
+          <Button asChild className="w-full">
+            <a>Read More</a>
+          </Button>
+        </Link>
       </CardFooter>
     </Card>
-  )
+  );
 }

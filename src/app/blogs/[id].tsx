@@ -4,10 +4,10 @@ import Link from "next/link"
 import Image from "next/image"
 import { blogPosts } from '../data/blog-post'
 
-export default function BlogPost() {
+export default function Post() {
   const router = useRouter()
   const { id } = router.query
-  
+  console.log(id)
   const post = blogPosts.find(post => post.id === Number(id))
 
   if (!post) {
@@ -16,7 +16,7 @@ export default function BlogPost() {
         <h1 className="text-4xl font-bold mb-4">Blog Post Not Found</h1>
         <p className="mb-8">Sorry, the blog post you are looking for does not exist.</p>
         <Button asChild>
-          <Link href="/blog">Back to Blog</Link>
+          <Link href="/blogs">Back to Blog</Link>
         </Button>
       </div>
     )

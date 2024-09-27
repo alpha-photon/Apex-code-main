@@ -1,4 +1,4 @@
-"use client";
+'use client'
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -24,11 +24,9 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="bg-white bg-opacity-10  p-8 rounded-lg   ">
-     {/* max-w-4xl mx-auto shadow-lg for old*/}
-      {/* <h2 className="text-2xl font-semibold text-gray-700 mb-2">CONNECT WITH US</h2> */}
+    <div className="container mx-auto px-4 py-8 bg-white bg-opacity-10 rounded-lg">
       <h1 className="text-5xl font-bold text-gray-900 mb-6">Ready to Innovate?</h1>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
           <p className="text-lg text-gray-600 mb-4">We are excited to hear about your project! Our team will reach out within 24 hours to discuss how we can bring your ideas to life.</p>
@@ -37,8 +35,7 @@ export default function ContactForm() {
             <Mail className="w-5 h-5 mr-2" />
             ApexCode.com
           </a>
-        </div>
-        
+        </div>        
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="flex items-center border-b border-gray-300">
             <User className="w-5 h-5 text-gray-400 mr-2" />

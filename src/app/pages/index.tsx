@@ -10,15 +10,20 @@ import HeroSection from '../components/hero';
 import Navbar from '../components/navbar';
 export default function Index() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white  to-white text-black">
-      <Navbar/>
-      <HeroSection/>
-      <ValuedCustomers/>
-      <ServiceSection/>
-      <WeWork/>
-      <CoreValue/>
-      <ContactForm/>
-      <Footer/>
+    <div className="min-h-screen bg-gradient-to-br from-white to-white text-black">
+      <Navbar />
+      
+      <main className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <HeroSection />
+        <ValuedCustomers />
+        <ServiceSection />
+        <WeWork />
+        <CoreValue />
+        <ContactForm />
+      </main>
+      
+      <Footer />
     </div>
   );
 }
+
