@@ -31,9 +31,9 @@ export default function ContactForm() {
         <div>
           <p className="text-lg text-gray-600 mb-4">We are excited to hear about your project! Our team will reach out within 24 hours to discuss how we can bring your ideas to life.</p>
           <p className="text-gray-600 mb-2">Prefer a direct approach?</p>
-          <a href="mailto:hello@innovatetech.com" className="text-blue-600 hover:underline flex items-center">
+          <a href="mailto:business@apexcode.in" className="text-blue-600 hover:underline flex items-center">
             <Mail className="w-5 h-5 mr-2" />
-            ApexCode.com
+            business@apexcode.in
           </a>
         </div>        
         <form onSubmit={handleSubmit} className="space-y-4">
