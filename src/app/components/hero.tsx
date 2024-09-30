@@ -50,7 +50,7 @@ export default function HeroSection() {
             </motion.p>
             <motion.div variants={itemVariants} className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
-                href="/consultation"
+                href="https://calendly.com/apexcodesystems/30min"
                 className="bg-white text-black px-6 py-3 rounded-lg font-semibold hover:bg-gray-300 transition duration-300 inline-flex items-center justify-center"
               >
                 Book Free Consultation
