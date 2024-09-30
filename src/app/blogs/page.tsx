@@ -29,7 +29,7 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white  to-white text-black">
       <Navbar />
-      <div className="bg-white container mx-auto px-4 py-8">
+      <div className="bg-white container mx-auto px-4 py-8 pt-20">
         <h1 className="text-4xl font-bold mb-8 text-center">Company Blog</h1>
 
         <div className="mb-8 flex justify-center">

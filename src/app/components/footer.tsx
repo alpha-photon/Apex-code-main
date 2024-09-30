@@ -41,9 +41,9 @@ export default function InteractiveFooter() {
           <div className="flex flex-col justify-between">
             <div>
               <h3 className="text-xl font-semibold mb-2 text-black">Say Hello</h3>
-              <Link href="mailto:hi@apexcode.com" className="flex items-center text-gray-500 hover:text-black transition-colors">
+              <Link href="mailto:business@apexcode.in" className="flex items-center text-gray-500 hover:text-black transition-colors">
                 <Mail className="mr-2" size={18} />
-                hi@apexcode.com
+                business@apexcode.in
               </Link>
             </div>
             <motion.div
