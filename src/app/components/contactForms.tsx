@@ -13,14 +13,43 @@ export default function ContactForm() {
     message: ''
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<string | null>(null); // to manage response feedback
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    // Here you would typically send the data to your backend
+    setIsSubmitting(true);
+    setSubmitStatus(null); // Reset the status message before submission
+
+    const googleScriptURL = 'https://script.google.com/macros/s/AKfycbxCh3kAUJQq3C41VxtkyKIqa834akXlxAUijvw4M1KofLTDaE29Py_jsmpBf_qERIGB1g/exec';
+
+    const formDataToSubmit = new FormData();
+    formDataToSubmit.append('Name', formData.name);
+    formDataToSubmit.append('Email', formData.email);
+    formDataToSubmit.append('Company', formData.company);
+    formDataToSubmit.append('Message', formData.message);
+
+    try {
+      const response = await fetch(googleScriptURL, {
+        method: 'POST',
+        body: formDataToSubmit
+      });
+
+      if (response.ok) {
+        setSubmitStatus('Form submitted successfully!'); // Success message
+        setFormData({ name: '', email: '', company: '', message: '' }); // Clear form
+      } else {
+        setSubmitStatus('Something went wrong!'); // Error message
+      }
+    } catch (error) {
+      setSubmitStatus('Error: ' + error.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -46,6 +75,7 @@ export default function ContactForm() {
               value={formData.name}
               onChange={handleChange}
               className="border-none focus:ring-0"
+              required
             />
           </div>
           <div className="flex items-center border-b border-gray-300">
@@ -57,6 +87,7 @@ export default function ContactForm() {
               value={formData.email}
               onChange={handleChange}
               className="border-none focus:ring-0"
+              required
             />
           </div>
           <div className="flex items-center border-b border-gray-300">
@@ -68,6 +99,7 @@ export default function ContactForm() {
               value={formData.company}
               onChange={handleChange}
               className="border-none focus:ring-0"
+              required
             />
           </div>
           <div className="flex items-start border-b border-gray-300">
@@ -78,14 +110,25 @@ export default function ContactForm() {
               value={formData.message}
               onChange={handleChange}
               className="border-none focus:ring-0 min-h-[100px]"
+              required
             />
           </div>
-          <Button type="submit" className="w-full bg-gray-300 hover:bg-gray-500 text-black">
-            <Send className="w-5 h-5 mr-2" />
-            Lets Collaborate
+          <Button
+            type="submit"
+            className={`w-full ${isSubmitting ? 'bg-gray-400' : 'bg-gray-300 hover:bg-gray-500'} text-black flex items-center justify-center`}
+            disabled={isSubmitting}
+          >
+            {isSubmitting ? 'Submitting...' : <>
+              <Send className="w-5 h-5 mr-2" />
+              Lets Collaborate
+            </>}
           </Button>
         </form>
+        {submitStatus && <p className={`text-center mt-4 ${submitStatus.startsWith('Error') ? 'text-red-500' : 'text-green-500'}`}>{submitStatus}</p>}
       </div>
     </div>
   )
 }
+
+//web url: https://script.google.com/macros/s/AKfycbxCh3kAUJQq3C41VxtkyKIqa834akXlxAUijvw4M1KofLTDaE29Py_jsmpBf_qERIGB1g/exec
+//deployment id :AKfycbxCh3kAUJQq3C41VxtkyKIqa834akXlxAUijvw4M1KofLTDaE29Py_jsmpBf_qERIGB1g
