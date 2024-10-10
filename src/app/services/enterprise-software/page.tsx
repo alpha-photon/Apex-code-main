@@ -2,9 +2,9 @@
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
    
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { FaBriefcase, FaServer, FaCogs, FaChartLine, FaShieldAlt, FaCode, FaDatabase, FaRocket,FaCloud } from 'react-icons/fa';
+import {  FaServer, FaCogs, FaChartLine, FaShieldAlt, FaCode, FaDatabase, FaRocket,FaCloud } from 'react-icons/fa';
 
 export default function EnterpriseSoftwareSolutions() {
   return (

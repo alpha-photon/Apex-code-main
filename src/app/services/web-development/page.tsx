@@ -2,7 +2,7 @@
 
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaNodeJs, FaDatabase, FaCloud, FaRocket, FaLaptopCode, FaCogs } from 'react-icons/fa';
 

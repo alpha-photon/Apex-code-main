@@ -2,7 +2,7 @@
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
    
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaMobileAlt, FaApple, FaAndroid, FaCode, FaRocket, FaCloud, FaCogs } from 'react-icons/fa';
 
@@ -116,7 +116,7 @@ export default function MobileAppDevelopment() {
       <section className="py-16 bg-gray-100">
         <h2 className="text-4xl font-bold text-center mb-8">Our Development Process</h2>
         <p className="text-lg max-w-3xl mx-auto mb-12 text-center text-gray-600">
-          We use a collaborative approach to mobile app development, ensuring that your app meets both your business needs and your users' expectations.
+          We use a collaborative approach to mobile app development, ensuring that your app meets both your business needs and your users expectations.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center mx-3">

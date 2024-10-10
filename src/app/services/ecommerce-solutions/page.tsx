@@ -75,7 +75,7 @@ export default function ECommerceSolutions() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Whether you're starting a new online store or expanding your existing e-commerce platform, our solutions are designed to help you succeed. We offer comprehensive services tailored to your business needs.
+            Whether you are starting a new online store or expanding your existing e-commerce platform, our solutions are designed to help you succeed. We offer comprehensive services tailored to your business needs.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -110,7 +110,7 @@ export default function ECommerceSolutions() {
             >
               <FaCreditCard className="text-4xl text-blue-600 mx-auto mb-4" />
               <h3 className="text-xl font-semibold mb-2">Secure Payment Integration</h3>
-              <p className="text-gray-600">We ensure secure payment gateways are integrated, offering multiple payment methods to meet your customers' needs.</p>
+              <p className="text-gray-600">We ensure secure payment gateways are integrated, offering multiple payment methods to meet your customers needs.</p>
             </motion.div>
           </div>
         </section>

@@ -75,7 +75,7 @@ export default function VendorIntegration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Our third-party vendor integration services help you connect with external services such as payment gateways, CRM systems, or cloud platforms. We ensure smooth and secure integration to enhance your system's functionality.
+            Our third-party vendor integration services help you connect with external services such as payment gateways, CRM systems, or cloud platforms. We ensure smooth and secure integration to enhance your system functionality.
           </motion.p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mx-4">

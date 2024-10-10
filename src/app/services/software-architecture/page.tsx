@@ -2,7 +2,7 @@
 
 import Navbar from "../../components/navbar";
 import Footer from "../../components/footer";
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { FaCogs, FaDraftingCompass, FaDatabase, FaServer, FaRocket, FaProjectDiagram, FaShieldAlt } from 'react-icons/fa';
 

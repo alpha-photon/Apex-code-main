@@ -1,7 +1,7 @@
 'use client';
 import Navbar from "../../components/navbar"
 import Footer from "../../components/footer"
-import Image from 'next/image';
+// import Image from 'next/image';
 import { FaCode, FaDatabase, FaCloud, FaCogs, FaRocket, FaSearch } from 'react-icons/fa';
 
 export default function CustomSoftwareDevelopment() {
@@ -22,7 +22,7 @@ export default function CustomSoftwareDevelopment() {
         <div className="relative z-10 text-center">
           <h1 className="text-5xl font-extrabold">Custom Software Development</h1>
           <p className="mt-4 text-lg font-light max-w-2xl mx-auto">
-            Tailored software solutions to meet your business's unique needs. From concept to deployment, we deliver high-quality, scalable, and user-friendly software.
+            Tailored software solutions to meet your business unique needs. From concept to deployment, we deliver high-quality, scalable, and user-friendly software.
           </p>
           <a href="#contact" className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg transition duration-300">
             Get in Touch
@@ -34,7 +34,7 @@ export default function CustomSoftwareDevelopment() {
       <section className="py-16 text-center">
         <h2 className="text-4xl font-bold mb-8">Why Custom Software Development?</h2>
         <p className="text-lg max-w-3xl mx-auto mb-12 text-gray-600">
-          In a world where off-the-shelf software might not always meet your business's growing demands, custom software development offers a flexible and scalable solution. Tailor-made software ensures you get exactly what you need to achieve your business goals.
+          In a world where off-the-shelf software might not always meet your business growing demands, custom software development offers a flexible and scalable solution. Tailor-made software ensures you get exactly what you need to achieve your business goals.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
