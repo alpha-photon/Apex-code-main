@@ -124,7 +124,7 @@ export default function ContactForm() {
             </>}
           </Button>
         </form>
-        {submitStatus && <p className={`text-center mt-4 ${submitStatus.startsWith('Error') ? 'text-red-500' : 'text-green-500'}`}>{submitStatus}</p>}
+        {submitStatus && <p className={`text-center mt-4 ${submitStatus.startsWith('Error') ? 'text-red-500' : 'text-gray-100'}`}>{submitStatus}</p>}
       </div>
     </div>
   )
