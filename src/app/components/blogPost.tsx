@@ -29,11 +29,12 @@ export function BlogPost({ id, title, excerpt, date, imageUrl }: BlogPostProps) 
         <p className="text-sm text-muted-foreground">Published on: {date}</p>
       </CardContent>
       <CardFooter className="p-4">
-        <Link href={`/blog/${id}`} >
-          <Button asChild className="w-full">
-            <a>Read More</a>
-          </Button>
-        </Link>
+      <Link href={`/blogs/${id}`} >
+  <Button asChild className="w-full">
+    <a>Read More</a>
+  </Button>
+</Link>
+
       </CardFooter>
     </Card>
   );

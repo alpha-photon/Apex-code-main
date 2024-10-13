@@ -1,12 +1,15 @@
+/* Import Tailwind base, components, and utilities */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Root CSS Variables for Colors */
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
+/* Dark Mode Colors */
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -14,18 +17,23 @@
   }
 }
 
+/* Base body styling */
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+/* Tailwind layer for custom utility */
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
 
+/* Base customizations and dark mode */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -54,6 +62,8 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
+  /* Dark Mode Variables */
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -82,11 +92,14 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+/* Apply consistent box-sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply background and text styles */
+body {
+  @apply bg-background text-foreground;
 }

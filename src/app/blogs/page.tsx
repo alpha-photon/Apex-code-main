@@ -29,10 +29,10 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-white  to-white text-black">
       <Navbar />
-      <div className="bg-white container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mb-8 text-center">Company Blog</h1>
+      <div className="bg-white container mx-auto px-4 py-8 my-5 pt-20">
+        <h1 className="text-4xl font-bold mb-8 text-center my-3">Company Blog</h1>
 
-        <div className="mb-8 flex justify-center">
+        <div className="mb-8 flex justify-center my-5">
           <Input
             type="text"
             placeholder="Search blog posts..."
