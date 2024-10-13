@@ -1,39 +1,48 @@
-"use client"
+'use client';
 
-import { motion } from "framer-motion"
-import { HandshakeIcon, RocketIcon, LightbulbIcon, RefreshCcwIcon } from "lucide-react"
+import { motion } from "framer-motion";
+import {
+  HandshakeIcon,
+  RocketIcon,
+  LightbulbIcon,
+  RefreshCcwIcon,
+} from "lucide-react";
 
 const cards = [
   {
     title: "High Ownership",
-    description: "We embody ownership by treating every project with personal commitment and pride, ensuring excellence in every detail.",
+    description:
+      "We embody ownership by treating every project with personal commitment and pride, ensuring excellence in every detail.",
     icon: HandshakeIcon,
-    color: "bg-green-50",
+    color: "bg-green-100",
   },
   {
     title: "First Principles",
-    description: "By questioning assumptions, we uncover the true essence of each problem & develop out-of-the-box solutions that drive success.",
+    description:
+      "By questioning assumptions, we uncover the true essence of each problem & develop out-of-the-box solutions that drive success.",
     icon: RocketIcon,
-    color: "bg-blue-50",
+    color: "bg-blue-100",
   },
   {
     title: "Design Thinking",
-    description: "Our deep-rooted belief in design thinking drives us to approach challenges with creativity and user-centricity.",
+    description:
+      "Our deep-rooted belief in design thinking drives us to approach challenges with creativity and user-centricity.",
     icon: LightbulbIcon,
-    color: "bg-red-50",
+    color: "bg-red-100",
   },
   {
     title: "Experimental Mindset",
-    description: "Our experimental mindset fosters a culture of adaptability and continuous improvement in all our endeavors.",
+    description:
+      "Our experimental mindset fosters a culture of adaptability and continuous improvement in all our endeavors.",
     icon: RefreshCcwIcon,
-    color: "bg-green-50",
+    color: "bg-yellow-100",
   },
-]
+];
 
 export default function AboutCards() {
   return (
-    <section className="py-16 px-4 md:px-8">
-      <motion.h2 
+    <section className="py-16 px-4 md:px-8 bg-white">
+      <motion.h2
         className="text-4xl md:text-5xl font-bold text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -42,7 +51,7 @@ export default function AboutCards() {
         <span className="text-blue-600">Impact-Focused</span>{" "}
         <span className="relative">
           Ways of Working
-          <motion.span 
+          <motion.span
             className="absolute -bottom-2 left-0 w-full h-1 bg-red-500"
             initial={{ width: 0 }}
             animate={{ width: "100%" }}
@@ -50,21 +59,22 @@ export default function AboutCards() {
           />
         </span>
       </motion.h2>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {cards.map((card, index) => (
           <motion.div
             key={card.title}
-            className={`p-6 rounded-lg shadow-md ${card.color}`}
+            className={`p-6 rounded-lg shadow-md transition-all hover:shadow-lg hover:scale-105 ${card.color}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
-            <card.icon className="w-12 h-12 mb-4 text-black" />
+            <card.icon className="w-12 h-12 mb-4 text-blue-600" />
             <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
             <p className="text-gray-600">{card.description}</p>
           </motion.div>
         ))}
       </div>
     </section>
-  )
+  );
 }
