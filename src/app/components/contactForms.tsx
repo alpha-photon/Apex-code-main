@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
-import { Mail, User, Building2, MessageSquare, Send, ArrowRight } from 'lucide-react'
+import { Mail, User, Building2, MessageSquare,  ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 
 export default function ContactForm() {
@@ -49,8 +49,9 @@ export default function ContactForm() {
       } else {
         setSubmitStatus('Something went wrong!');
       }
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (error) {
-      setSubmitStatus('Error: ' + error.message);
+      setSubmitStatus('Error');
     } finally {
       setIsSubmitting(false);
     }
@@ -65,7 +66,7 @@ export default function ContactForm() {
       >
         <h1 className="text-5xl font-bold text-gray-900 mb-6 text-center">Ready to Innovate?</h1>
         <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
-          We're excited to hear about your project! Our team will reach out within 24 hours to discuss how we can bring your ideas to life.
+          We are excited to hear about your project! Our team will reach out within 24 hours to discuss how we can bring your ideas to life.
         </p>
       </motion.div>
 
@@ -106,8 +107,8 @@ export default function ContactForm() {
         >
           <Card className="bg-white shadow-lg">
             <CardHeader>
-              <CardTitle className="text-2xl font-semibold">Let's Collaborate</CardTitle>
-              <CardDescription>Fill out the form and we'll be in touch soon</CardDescription>
+              <CardTitle className="text-2xl font-semibold">Lets Collaborate</CardTitle>
+              <CardDescription>Fill out the form and we will be in touch soon</CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -181,7 +182,7 @@ export default function ContactForm() {
                 >
                   {isSubmitting ? 'Submitting...' : (
                     <>
-                      Let's Collaborate
+                      Lets Collaborate
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </>
                   )}

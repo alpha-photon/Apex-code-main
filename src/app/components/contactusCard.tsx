@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { EnvelopeIcon, PhoneIcon, ClockIcon, UserGroupIcon } from '@heroicons/react/24/outline'; // Correct import for Heroicons v2
+import { EnvelopeIcon,  ClockIcon, UserGroupIcon } from '@heroicons/react/24/outline'; // Correct import for Heroicons v2
 
 export default function ContactUsSection() {
   return (

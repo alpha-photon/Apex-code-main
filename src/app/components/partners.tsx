@@ -90,7 +90,7 @@ export default function ValuedCustomers() {
         </h2>
         <div className="w-32 h-1 bg-red-700 mx-auto mb-8"></div>
         <p className="text-center text-gray-600 max-w-3xl mx-auto mb-12">
-          Discover the trusted clients and industry-leading companies we've collaborated with, showcasing our dedication to developing cutting-edge technology solutions and fostering successful, long-term partnerships.
+          Discover the trusted clients and industry-leading companies we have collaborated with, showcasing our dedication to developing cutting-edge technology solutions and fostering successful, long-term partnerships.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
           {companies.map((company, index) => (
