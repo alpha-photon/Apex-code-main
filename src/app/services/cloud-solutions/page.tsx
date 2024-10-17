@@ -14,7 +14,7 @@ export default function CloudSolutions() {
 
         {/* Hero Section */}
         <motion.section
-          className="relative bg-blue-900 text-white py-20"
+          className="relative  text-black py-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
