@@ -10,24 +10,29 @@ export default function SoftwareArchitectureConsulting() {
   return (
     <>
       <Navbar />
-      <div className="container mx-auto px-4 py-16 my-14">
+      <div className="container mx-auto px-4 py-16 ">
 
         {/* Hero Section */}
         <motion.section
-          className="relative bg-gray-900 text-white py-20"
+          className="relative  text-black py-20"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          {/* <div className="absolute inset-0">
-            <Image
-              src="/images/software-architecture-bg.jpg"
-              alt="Software Architecture Consulting"
-              layout="fill"
-              objectFit="cover"
-              className="opacity-50"
-            />
-          </div> */}
+          <div className="absolute inset-0">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <svg className="absolute left-0 top-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.05)" strokeWidth="1" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+            <div className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full opacity-20 blur-3xl"></div>
+            <div className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-blue-100 to-blue-200 rounded-full opacity-20 blur-3xl"></div>
+          </div>
+          </div>
           <div className="relative z-10 text-center">
             <motion.h1
               className="text-5xl font-extrabold"
@@ -116,7 +121,7 @@ export default function SoftwareArchitectureConsulting() {
         </section>
 
         {/* Our Software Architecture Process */}
-        <section className="py-16 bg-gray-100">
+        <section className="py-16 bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200 px-4">
           <h2 className="text-4xl font-bold text-center mb-8">Our Consulting Process</h2>
           <p className="text-lg max-w-3xl mx-auto mb-12 text-center text-gray-600">
             We follow a structured process to ensure that every step of the architecture consulting is aligned with your business goals and technical requirements.

@@ -8,51 +8,68 @@ import { FaMobileAlt, FaApple, FaAndroid, FaCode, FaRocket, FaCloud, FaCogs } fr
 
 export default function MobileAppDevelopment() {
   return (
-    <><Navbar /><div className="container mx-auto px-4 py-16 my-14">
+    <><Navbar />
 
       {/* Hero Section */}
-      <motion.section
-        className="relative bg-blue-900 text-white py-20"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        {/* <div className="absolute inset-0">
-          {/* <Image
-            src="/images/mobile-app-development-bg.jpg"
-            alt="Mobile App Development"
-            layout="fill"
-            objectFit="cover"
-            className="opacity-50" />
-        </div> */} 
-        <div className="relative z-10 text-center">
-          <motion.h1
-            className="text-5xl font-extrabold"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 1.2 }}
-          >
-            Mobile App Development
-          </motion.h1>
-          <motion.p
-            className="mt-4 text-lg font-light max-w-2xl mx-auto"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            We build custom mobile apps that provide seamless user experiences, are fast, reliable, and scalable across platforms like iOS and Android.
-          </motion.p>
-          <motion.a
-            href="#contact"
-            className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg transition duration-300"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.4 }}
-          >
-            Get in Touch
-          </motion.a>
-        </div>
-      </motion.section>
+      <div className="container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.section
+          className="relative text-black py-20"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            {/* SVG Background with animation */}
+            <svg className="absolute left-0 top-0 h-full w-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                  <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,0,0,0.05)" strokeWidth="1" />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+            <motion.div
+              className="absolute -left-1/4 -top-1/4 w-1/2 h-1/2 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full opacity-20 blur-3xl"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.2 }}
+            />
+            <motion.div
+              className="absolute -right-1/4 -bottom-1/4 w-1/2 h-1/2 bg-gradient-to-tl from-blue-100 to-blue-200 rounded-full opacity-20 blur-3xl"
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.2 }}
+            />
+          </div>
+          <div className="relative z-10 text-center">
+            <motion.h1
+              className="text-5xl font-extrabold"
+              initial={{ y: -50, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1.2 }}
+            >
+              Mobile App Development
+            </motion.h1>
+            <motion.p
+              className="mt-4 text-lg font-light max-w-2xl mx-auto"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+            >
+              We build custom mobile apps that provide seamless user experiences, are fast, reliable, and scalable across platforms like iOS and Android.
+            </motion.p>
+            <motion.a
+              href="#contact"
+              className="mt-6 inline-block bg-red-600 hover:bg-red-700 text-white py-3 px-6 rounded-lg transition duration-300"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.4 }}
+            >
+              Get in Touch
+            </motion.a>
+          </div>
+        </motion.section>
 
       {/* Why Mobile App Development */}
       <section className="py-16 text-center">
@@ -113,7 +130,7 @@ export default function MobileAppDevelopment() {
       </section>
 
       {/* Our Mobile App Development Process */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-16 bg-gradient-to-r from-blue-200 via-pink-200 to-purple-200">
         <h2 className="text-4xl font-bold text-center mb-8">Our Development Process</h2>
         <p className="text-lg max-w-3xl mx-auto mb-12 text-center text-gray-600">
           We use a collaborative approach to mobile app development, ensuring that your app meets both your business needs and your users expectations.

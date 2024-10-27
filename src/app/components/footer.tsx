@@ -4,13 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Mail, ArrowRight, Github, Linkedin, Twitter } from 'lucide-react';
 
-const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'About', path: '/about' },
-  { name: 'Services', path: '/services' },
-  { name: 'Contact', path: '/contact' },
-  { name: 'Blogs', path: '/blogs' }
-];
+
 
 const serviceItems = [
   { name: "Custom Software Development", path: "/services/custom-software" },
@@ -92,18 +86,7 @@ export default function InteractiveFooter() {
             </div>
           </div>
         </div>
-        <nav className="mt-8">
-         
-          <ul className="flex flex-wrap space-x-4 justify-center">
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link href={item.path} className="text-gray-400 hover:text-white transition-colors">
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+       
 
         <div className="border-t border-gray-200 pt-8 mt-8 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
           <div>
