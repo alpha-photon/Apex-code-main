@@ -7,14 +7,13 @@ import Image from 'next/image';
 import { blogPosts } from '../../../app/data/blog-post';
 import { Button } from "@/components/ui/button";
 import Navbar from '../../components/navbar';
-import Footer from '../../components/footer';
-
+import Footer from '../../components/footer'
 // Define the type for your post object
 interface Post {
   id: number;
   title: string;
   excerpt: string;
-  content: JSON;
+  content: string;
   date: string;
   imageUrl: string;
 }
@@ -23,11 +22,11 @@ export default function Post() {
   const [post, setPost] = useState<Post | null>(null);
   const [loading, setLoading] = useState(true);
   const { id } = useParams(); // Get the post ID from the URL
-
+  
   useEffect(() => {
     if (id) {
       const foundPost = blogPosts.find(post => post.id === Number(id));
-      setPost(foundPost);
+      setPost(foundPost || null);
       setLoading(false);
     }
   }, [id]);
@@ -82,7 +81,7 @@ export default function Post() {
 
         {/* Sidebar with list of blog posts */}
         <aside className="lg:w-1/4 bg-gray-50 p-6 rounded-lg shadow-lg">
-          <h2 className="text-2xl font-semibold text-gray-800 mb-4">All Blogs</h2>
+          <h2 className="text-2xl font-semibold text-gray-800 mb-4 my-2">All Blogs</h2>
           <ul className="space-y-4">
             {blogPosts.map((blog) => (
               <li key={blog.id} className="hover:bg-gray-100 p-4 rounded transition-colors">
@@ -103,9 +102,7 @@ export default function Post() {
           </ul>
         </aside>
       </div>
-
-      {/* Footer */}
-      <Footer />
+      <Footer/>
     </>
   );
 }
