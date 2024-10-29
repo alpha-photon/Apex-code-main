@@ -92,10 +92,7 @@ export default function InteractiveFooter() {
           <div>
             Apex Code © {new Date().getFullYear()}. All rights reserved.
           </div>
-          <div className="mt-4 md:mt-0">
-            <Link href="/privacy-policy" className="mr-4 hover:text-blue-600 transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-blue-600 transition-colors">Terms of Service</Link>
-          </div>
+          
         </div>
       </div>
     </footer>
